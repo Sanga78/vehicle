@@ -75,6 +75,10 @@ font-weight: 600;
     border-radius: 2px;
     padding-bottom: .5rem;
 }
+.mobile-nav-show,
+.mobile-nav-hide {
+    display: none;
+}
 /* end of header section */
 
 /* body section */
@@ -130,14 +134,42 @@ footer{
 }
 
 @media(max-width:768px) {
+    .logo{
+        position: relative;
+    }
     .header .navbar {
-        position: absolute;
+        display: none;
         top: 100;
         right: -100%;
         background: #fff;
         width: 30rem;
-        height: calc(100vh - 9.5rem);
     }
+    .navbar .active{
+        display: block;
+    }
+    .mobile-nav-show {
+        display: block;
+        color: var(--black);
+        font-size: 28px;
+        cursor: pointer;
+        line-height: 0;
+        transition: 0.5s;
+        z-index: 9999;
+        margin: 0 10px 0 10px;
+        right: 20px;
+        top: 20px;
+    }
+    .mobile-nav-hide {
+        color: var(--black);
+        font-size: 42px;
+        cursor: pointer;
+        line-height: 0;
+        transition: 0.5s;
+        position: fixed;
+        right: 20px;
+        top: 2px;
+        z-index: 9999;
+      }
     .header .navbar .active {
         right: 0;
     }
@@ -175,4 +207,9 @@ footer{
   #main{
     background-size: cover;
   }
+}
+.nerves{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
