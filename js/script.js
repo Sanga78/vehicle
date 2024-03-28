@@ -13,6 +13,22 @@ function closeNavbar(){
     menubtn.style.display="block";
     crossbtn.style.display="none";
 }
-window.onscroll = () => {
+if (menubtn.style.display="block"){
+    crossbtn.style.display="none";
+}else{
     menubtn.style.display="none";
 }
+
+function widthChangeCallback(){
+    if(window.innerWidth<768){
+        menubtn.style.display="initial";
+        navbar.style.display="none";
+    }else{
+        crossbtn.style.display="none";
+        menubtn.style.display="none";
+        navbar.style.display="initial";
+    }
+}
+window.addEventListener("resize",
+widthChangeCallback);
+widthChangeCallback();
