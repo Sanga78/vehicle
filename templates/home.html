@@ -13,28 +13,24 @@
 
 <body>
  <!-- header section starts here -->
+ 
  <header class="header">
-	<a href="#" class="logo">
-		<img src="" alt="logo">
-	</a>
-	<div class="links">
-		<div class="nerves">
-			<nav class="navbar" id="navbar">
-				<a href="" class="active">Home</a>
-				<a href="">Hire a car</a>
-				<a href="">Tours & Travel</a>
-				<a href="">Earn</a>
-				<a href="">Grow</a>
-				<a href="">Hire a Bike</a>
-				<a href="">About Us</a>
-				<a href="">Privacy Policy</a>
-			</nav>
-		</div>
-		<div class="mofo">
-			<i class="mobile-nav-toggle mobile-nav-show bi bi-list" id="menu-btn" onclick="displayNavbar()"></i>
-		<i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x" id="crossbtn" onclick="closeNavbar()"></i>
-		</div>
-	</div>
+	<nav class="navbar">
+		<img class="logo" id="logo" src="" alt="Logo">
+		<input class="menu-btn" type="checkbox" id="menu-btn" />
+		<label class="menu-icon" for="menu-btn"><span class="nav-icon"></span></label>
+		<!-- Menu-->
+		<ul class="menu">
+			<li><a href="" class="active">Home</a></li>
+			<li><a href="car.html">Hire a car</a></li>
+			<li><a href="">Tours & Travel</a></li>
+			<li><a href="">Earn</a></li>
+			<li><a href="">Grow</a></li>
+			<li><a href="">Hire a Bike</a></li>
+			<li><a href="">About Us</a></li>
+			<li><a href="">Privacy Policy</a></li>
+		</ul>
+	</nav>
 </header>
 <!-- <section id="#main" class="vidaa">
 	<div class="video"></div>
@@ -45,7 +41,7 @@
 		<video src="/media/video/Twende.mp4" muted autoplay loop></video>
 	</div>
 	<div class="description">
-		<h2>Welcome to Twende</h2>
+		<h2 class="welcome">Welcome to Twende</h2>
 		<h2>Hire.Earn.Grow</h2>
 	</div>
 	<div class="testimonials">
@@ -63,11 +59,24 @@
 		</div>
 	</div>
 </section>
-<section>
-	<div class="carousel">
-
+<!-- <section class="carousel">
+	<div class="carou">
+		<div class="testimonials">
+			<div class="person">
+				<p>Simply the best way to hire a car</p>
+				<a href="">Paul Rosso</a>
+			</div>
+			<div class="person">
+				<p>Simply the best way to hire a car</p>
+				<a href="">Paul Rosso</a>
+			</div>
+			<div class="person">
+				<p>Simply the best way to hire a car</p>
+				<a href="">Paul Rosso</a>
+			</div>
+		</div>
 	</div>
-</section>
+</section> -->
 <footer>
 	<div class="footer">
 		<div class="img">
@@ -75,7 +84,7 @@
 		</div>
 		<div class="shortcuts">
 			<ul class="links">
-				<li><a href="">Home</a></li>
+				<li><a href="" class="active">Home</a></li>
 				<li><a href="">Hire a car</a></li>
 				<li><a href="">Tours & Travel</a></li>
 				<li><a href="">Earn</a></li>
@@ -100,5 +109,5 @@
       </div>
 </footer>
 </body>
-<script src="../js/script.js"></script>
+<!-- <script src="../js/script.js"></script> -->
 </html>
