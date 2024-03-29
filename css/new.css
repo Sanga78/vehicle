@@ -131,11 +131,10 @@ button {
 }
 
 .home {
-    min-height: 95vh;
+    min-height: 90vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: url(projectImages/Home.jpg) no-repeat;
     background-size: cover;
     background-position: center;
     flex-wrap: wrap;
@@ -242,50 +241,6 @@ button {
     font-size: 1.5rem;
     color: var(--main-color);
 }
-/* 
-.contacts .row {
-    display: flex;
-    align-items: center;
-    background: var(--black);
-    flex-wrap: wrap;
-    gap: 1rem;
-}
-
-.contacts .row form {
-    flex: 1 1 45rem;
-    padding: 5rem 2rem;
-    text-align: center;
-}
-
-.contacts .row form h3 {
-    text-transform: uppercase;
-    font-size: 3.5rem;
-    color: #fff;
-}
-
-.contacts .row form .inputbox {
-    display: flex;
-    align-items: center;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    background: var(--bg);
-    border: var(--border);
-}
-
-.contacts .row form .inputbox span {
-    color: var(--black);
-    font-size: 2rem;
-    padding-left: 2rem;
-}
-
-.contacts .row form .inputbox input {
-    width: 100%;
-    padding: 2rem;
-    font-size: 1.7rem;
-    color: var(--black);
-    text-transform: none;
-    background: none;
-} */
 
 .blogs .box-container {
     display: grid;
@@ -342,8 +297,12 @@ button {
 }
 
 .footer {
-    background: var(--black);
-    text-align: center;
+    background: whitesmoke;
+    text-align: start;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border-top: var(--border);
 }
 
 .footer .share {
@@ -359,7 +318,7 @@ button {
     width: 5rem;
     line-height: 5rem;
     font-size: 2rem;
-    color: #fff;
+    color: var(--black);
     border: var(--border);
     margin: .3rem;
     border-radius: 50%;
@@ -371,31 +330,35 @@ button {
 
 .footer .links {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     flex-wrap: wrap;
-    padding: 2rem 0;
-    gap: 1rem;
+    padding: 1rem 0;
+    gap: .5rem;
 }
 
 .footer .links a {
-    padding: .7rem 2rem;
-    color: var(--white);
-    border: .5px solid var(--white);
+    padding: .2rem 0;
+    color: var(--black);
     font-size: 2rem;
 }
-
-.footer .links a:hover {
-    background-color: var(--main-color);
+.footer .links a:hover,
+.footer .active{
+    font-weight: 600;
 }
-
-.footer .credit {
+.footer .cont{
+    font-size: 1.5rem;
+}
+.footer .cont h3{
+    font-weight: lighter;
+}
+.credit {
     font-size: 2rem;
-    color: #fff;
+    color: var(--black);
     font-weight: lighter;
     padding: 1.5rem;
 }
 
-.footer .credit span {
+.credit span {
     color: var(--main-color);
 }
 
