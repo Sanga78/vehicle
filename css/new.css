@@ -178,7 +178,8 @@ button {
 .menu .box-container .box {
     padding: 5rem;
     text-align: center;
-    border: var(--border);
+    /* border: var(--border); */
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .menu .box-container .box img {
