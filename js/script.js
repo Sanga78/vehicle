@@ -31,4 +31,36 @@ function widthChangeCallback(){
 }
 window.addEventListener("resize",
 widthChangeCallback);
-widthChangeCallback();
+
+    document.addEventListener("DOMContentLoaded", function() {
+    const testimonials = document.querySelector('.testimonials');
+    const persons = document.querySelectorAll('.person');
+    const prevButton = document.querySelector('.prev');
+    const nextButton = document.querySelector('.next');
+
+    let index = 0;
+    const interval = 3000; // Change slide every 3 seconds
+
+    function showPerson(idx) {
+        persons.forEach((person, i) => {
+            person.style.display = (i === idx) ? 'inline-block' : 'none';
+        });
+    }
+
+    function nextPerson() {
+        index = (index + 1) % persons.length;
+        showPerson(index);
+    }
+
+    function prevPerson() {
+        index = (index - 1 + persons.length) % persons.length;
+        showPerson(index);
+    }
+
+    nextButton.addEventListener('click', nextPerson);
+    prevButton.addEventListener('click', prevPerson);
+
+    setInterval(nextPerson, interval);
+});
+
+
