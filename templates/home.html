@@ -7,11 +7,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="description" content="Travello template project">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<!-- <link href="/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="../css/style.css">
-	<link rel="stylesheet" type="text/css" href="../css/new.css"> -->
   	<link rel="stylesheet" href="../css/styles.css">
-
 </head>
 
 <body>
@@ -30,8 +26,8 @@
 			<li><a href="earn.html">Earn</a></li>
 			<li><a href="grow.html">Grow</a></li>
 			<li><a href="bike.html">Hire a Bike</a></li>
-			<li><a href="">About Us</a></li>
-			<li><a href="">Privacy Policy</a></li>
+			<li><a href="about.html">About Us</a></li>
+			<li><a href="privacy.html">Privacy Policy</a></li>
 		</ul>
 	</nav>
 </header>
@@ -66,25 +62,6 @@
         <button class="next">&#8250;</button>
     </div>
 </section>
-<!-- <section class="carousel">
-	<div class="carou">
-		<div class="testimonials">
-			<div class="person">
-				<p>Simply the best way to hire a car</p>
-				<a href="">Paul Rosso</a>
-			</div>
-			<div class="person">
-				<p>Simply the best way to hire a car</p>
-				<a href="">Paul Rosso</a>
-			</div>
-			<div class="person">
-				<p>Simply the best way to hire a car</p>
-				<a href="">Paul Rosso</a>
-			</div>
-		</div>
-	</div>
-</section> -->
-
 
 <section class="footer ">
 	<!-- <div class="share ">
@@ -115,4 +92,37 @@
 </section>
 </body>
 <script src="../js/script.js"></script>
+<script>
+	document.addEventListener("DOMContentLoaded", function() {
+    const testimonials = document.querySelector('.testimonials');
+    const persons = document.querySelectorAll('.person');
+    const prevButton = document.querySelector('.prev');
+    const nextButton = document.querySelector('.next');
+
+    let index = 0;
+    const interval = 3000; // Change slide every 3 seconds
+
+    function showPerson(idx) {
+        persons.forEach((person, i) => {
+            person.style.display = (i === idx) ? 'inline-block' : 'none';
+        });
+    }
+
+    function nextPerson() {
+        index = (index + 1) % persons.length;
+        showPerson(index);
+    }
+
+    function prevPerson() {
+        index = (index - 1 + persons.length) % persons.length;
+        showPerson(index);
+    }
+
+    nextButton.addEventListener('click', nextPerson);
+    prevButton.addEventListener('click', prevPerson);
+
+    setInterval(nextPerson, interval);
+});
+
+</script>
 </html>
