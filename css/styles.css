@@ -1,9 +1,9 @@
 :root {
-    --main-color: wheat;
+    --main-color: rgb(8, 94, 180);
     --black: #13131a;
     --bg: white;
     --white: #ffffff;
-    --border: .1rem solid rgba(14, 14, 14, 0.22);
+    --border: .1rem solid rgba(0, 0, 0, 0.62);
 }
 
 * {
@@ -66,17 +66,17 @@ html::-webkit-scrollbar-thumb {
     transition: .5s;
 	text-decoration: none;
 }
+
+.navbar ul a.active,
 .navbar ul a:hover{
-    color:var(--main-color);
-    transition: .5s;
-    font-size: 22px;
-    font-weight: normal;
-}
-.navbar ul a.active{
     border-bottom: .2rem solid var(--black);
     border-radius: 2px;
-    padding-bottom: .5rem;
-    font-weight: 600;
+    padding-bottom: .4rem;
+    color: var(--main-color);
+}
+.navbar ul a:hover{
+    font-weight: bold;
+    border: none;
 }
 .navbar .menu{
     clear: both;
@@ -101,11 +101,11 @@ html::-webkit-scrollbar-thumb {
     background: var(--black);
     content: "";
     display: block;
-     height: 100%;
-     width: 100%;
-     position: absolute;
-     transition: all .2s ease-out;
-     top: 5px;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    top: 5px;
 }
 .navbar .menu-icon .nav-icon:after{
     background: var(--black);
@@ -156,7 +156,7 @@ nav ul li img.icon{
     width: 20px;
 }
 .testimonials {
-    background-color: antiquewhite;
+background-color: antiquewhite;
 overflow: hidden;
 white-space: nowrap;
 display: flex;
@@ -186,3 +186,125 @@ color: #333;
 font-size: 24px;
 cursor: pointer;
 }
+
+/* home section */
+.home{
+    text-align: center;
+}
+.home video{
+margin-top: -18%;
+}
+.home .description{
+    font-size: 1.5rem;
+    color: var(--main-color);
+}
+.home .description span{
+color: var(--black);
+}
+/* end of home section */
+
+/* footer section styling */
+.footer{
+    background: var(--bg);
+    padding: 20px 10%;
+    color: var(--black);
+    position: bottom;
+    font-size: 1.2rem;
+    font-weight: 100;
+    height: 65vh;
+}
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.footer > div{
+    min-width: 200px;
+    padding: 1.5rem;
+}
+.footer .links{
+    display: block;
+    text-transform: unset;
+}
+.footer .links ul{
+    list-style: none;
+    line-height: 2rem;
+}
+.footer .links ul li a{
+    text-decoration: none;
+    color: var(--black);
+    font-size: 1.2rem;
+    font-weight: 100;
+}
+.footer .links ul li a.active{
+    font-weight: 600;
+}
+.footer .links ul li a:hover{
+    border-bottom: .15rem solid rgba(6, 5, 5, 0.52);
+    border-radius: 2px;
+    padding-bottom: .5rem;
+}
+
+.share a{
+padding:1rem;
+}
+/* media queries */
+@media(max-width: 450px) {
+    html {
+        font-size: 70%;
+    }
+    footer{
+        padding: 10px;
+    }
+    
+}
+
+@media (min-aspect-ratio: 16/9) {
+    video {
+      width: 100%;
+      height: auto;
+    }
+  }
+@media (max-aspect-ratio: 16/9) {
+    video {
+      width: auto;
+      height: 100%;
+    }
+  }
+@media (max-width: 768px) {
+    video {
+    display: none;
+  }
+  #main{
+    background-size: cover;
+  }
+}
+.tours .hero {
+    padding: 15px 5%;
+}
+.tours .hero .row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.tours .hero .row .col{
+    max-width: 400px;
+    min-height: 5rem;
+    padding: 2.5rem;
+}
+.tours .connect form {
+    width: 60vw;
+    max-width: 500px;
+    min-width: 300px;
+    margin: 0 auto;
+    padding-bottom: 2em;
+}
+.btn{
+    color: var(--white);
+    background-color: var(--main-color);
+    padding: .6rem 1.2rem;
+    font-size: 1.3rem;
+    border-radius: .5rem;
+} 
