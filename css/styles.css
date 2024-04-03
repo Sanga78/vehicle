@@ -280,6 +280,15 @@ padding:1rem;
     background-size: cover;
   }
 }
+.tours .home{
+    height: 80vh;
+}
+.tours .home .content{
+    padding-top: 5rem;
+}
+.tours .home .content h2{
+padding: 2rem;
+}
 .tours .hero {
     padding: 15px 5%;
 }
