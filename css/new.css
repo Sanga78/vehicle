@@ -460,6 +460,6 @@ input[type="submit"] {
     font-size: 1.8rem;
     background-color:var(--main-color);
     color: var(--white);
-    min-width: 300px;
+    min-width: 50vw;
     padding: 1.4rem;
 }
