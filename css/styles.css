@@ -3,9 +3,11 @@
     --black: #13131a;
     --bg: white;
     --white: #ffffff;
-    --border: .1rem solid rgba(0, 0, 0, 0.62);
+    --border: 1px solid rgba(0, 0, 0, 0.62);
 }
-
+h1,h2,h3,h4,h5,h6{
+	color:hsl(0, 0%, 7%);
+}
 * {
     font-family: 'Times New Roman', Times, serif;
     margin: 0;
@@ -252,7 +254,7 @@ padding:1rem;
 /* media queries */
 @media(max-width: 450px) {
     html {
-        font-size: 70%;
+        font-size: 75%;
     }
     footer{
         padding: 10px;
@@ -289,7 +291,7 @@ padding:1rem;
 .tours .home .content h2{
 padding: 2rem;
 }
-.tours .hero {
+.tours .hero {  
     padding: 15px 5%;
 }
 .tours .hero .row{
@@ -303,17 +305,207 @@ padding: 2rem;
     min-height: 5rem;
     padding: 2.5rem;
 }
-.tours .connect form {
-    width: 60vw;
-    max-width: 500px;
-    min-width: 300px;
-    margin: 0 auto;
-    padding-bottom: 2em;
-}
+
 .btn{
     color: var(--white);
     background-color: var(--main-color);
     padding: .6rem 1.2rem;
     font-size: 1.3rem;
     border-radius: .5rem;
+    text-align: center;
 } 
+.tours .plan{
+    padding: 15px 7%;
+    min-height: 65vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-stretch;
+    flex: 1 1 45rem;
+    flex-wrap: wrap;
+}
+.tours .plan .image{
+    flex: 40%;
+}
+.tours .plan .memory{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    border: var(--border);
+    padding: 1.5rem;
+    border-radius: .5rem;
+    height: 280px;
+    width: 480px;
+}
+.tours .plan .memory .btn{
+    margin-top: 2.5rem;
+}
+.tours .connect{
+    margin-top: 2rem;
+    text-align: center;
+    min-height: 60vh;
+    padding: 15px 7%;
+}
+.tours .connect form{
+    width: 60vw;
+    text-align: start;
+    max-width: 500px;
+    min-width: 300px;
+    margin: 0 auto;
+    padding: 2em;
+    border: var(--border);
+    border-radius: .5rem;
+}
+.tours .connect h2{
+    font-size: 1.8rem;
+    color: green;
+}
+.tours .connect h2 span{
+color: var(--main-color);
+}
+.tours .connect h3,h2{
+    text-align: center;
+    padding-bottom: .8rem;
+    text-transform: capitalize;
+    font-size: 1.4rem;
+    color: var(--main-color);
+}
+.tours .connect form label{
+    display: block;
+    margin: 0.5rem 0;
+}
+.tours .connect form input,textarea {
+    margin: 10px 0 0 0;
+    width: 100%;
+    min-height: 2em;
+    padding-left: .3rem;
+}
+  
+input,textarea {
+    border-bottom: var(--border);
+}
+  
+textarea{
+    border: var(--border);
+} 
+.tours .connect form button{
+    display: block;
+    width: 90%;
+    margin: 1em auto;
+    height: 2em;
+    font-size: 1.1rem;
+    border-color: white;
+    min-width: 20vw;
+}
+@media(max-width: 450px) {
+    .tours .connect{
+        padding: 2px;
+    }
+}
+
+.buy {
+    margin: 0;
+    font-family: sans-serif;
+    background: #f5f6f7;
+}
+.buy .home{
+    min-height: 90vh;
+}  
+.buy .header {
+    text-align: center;
+    text-transform: uppercase;
+    padding: 32px;
+    background-color: var(--main-color);
+    color: #fff;
+    border-bottom: 4px solid var(--black);
+}
+  
+.buy .row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px 10px;
+}
+.buy .row .col{
+    border: var(--border);
+    border-radius: 10px;
+    max-width: 350px;
+    text-align: center;
+}
+    
+.buy .row .col img {
+    width: 100%;
+    max-width: 350px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.buy .row .col:hover img {
+    transform: scale(1.2);
+} 
+.buy .row::after {
+    content: "";
+    width: 350px;
+}
+.buy .row .col button{
+    display: block;
+    width: 95%;
+    margin: 1em auto;
+    height: 2em;
+    font-size: 1.2rem;
+    border-color: white;
+    min-width: 20vw;
+}
+.about{
+    padding: 10px 7%;
+}
+.about .row {
+    display: block;
+}
+.about .title {
+    font-size: 1.5rem;
+    line-height: 1.5;
+    color: var(--black);
+    max-width: 65vw;
+    margin: 0 auto;
+}
+.about .title:hover {
+    color: var(--main-color);
+}
+.about .row .columns {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+}
+
+.about .row .columns .image {
+    overflow: hidden;
+    width: 100%;
+}
+
+.about .row .columns .image img {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+}
+
+.about .row .columns:hover .image img {
+    transform: scale(1.2);
+}
+
+.about .row .columns .content {
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1.2rem;
+    align-items: start;
+}
+
+
+
