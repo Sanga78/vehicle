@@ -1,5 +1,5 @@
 :root {
-    --main-color: rgb(9, 113, 231);
+    --main-color: rgb(83, 172, 250);
     --black: #13131a;
     --bg: white;
     --white: #ffffff;
@@ -131,10 +131,11 @@ button {
 }
 
 .home {
-    min-height: 90vh;
+    min-height: 95vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    background: var(--main-color);
     background-size: cover;
     background-position: center;
     flex-wrap: wrap;
@@ -142,6 +143,7 @@ button {
 }
 
 .home .content {
+    color: var(--white);
     max-width: 50rem;
     flex: 1 1 45rem;
 }
@@ -157,7 +159,7 @@ button {
 }
 
 .home .content h3 span {
-    color: var(--main-color);
+    color: var(--white);
 }
 
 .home .content p {
@@ -241,60 +243,6 @@ button {
 .review .box-container .box .stars {
     font-size: 1.5rem;
     color: var(--main-color);
-}
-
-.blogs .box-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-    gap: 1.5rem;
-}
-
-.blogs .box-container .box {
-    border: var(--border);
-}
-
-.blogs .box-container .box .image {
-    height: 25rem;
-    overflow: hidden;
-    width: 100%;
-}
-
-.blogs .box-container .box .image img {
-    height: 100%;
-    object-fit: cover;
-    width: 100%;
-}
-
-.blogs .box-container .box:hover .image img {
-    transform: scale(1.2);
-}
-
-.blogs .box-container .box .content {
-    padding: 2rem;
-}
-
-.blogs .box-container .box .content .title {
-    font-size: 2.5rem;
-    line-height: 1.5;
-    color: #fff;
-}
-
-.blogs .box-container .box .content .title:hover {
-    color: var(--main-color);
-}
-
-.blogs .box-container .box .content span {
-    color: var(--main-color);
-    display: block;
-    padding-top: 1rem;
-    font-size: 2rem;
-}
-
-.blogs .box-container .box .content p {
-    font-size: 1.6rem;
-    line-height: 1.8;
-    color: #ccc;
-    padding: 1rem 0;
 }
 
 .footer {
@@ -427,10 +375,9 @@ button {
 }
 
 form {
-    /* width: 60vw;
+    width: 60vw;
     max-width: 500px;
-    min-width: 300px; */
-    margin: 0 auto;
+    min-width: 280px;
     padding: 1rem 2rem;
     border: 1px solid var(--black);
 }
@@ -455,11 +402,11 @@ select {
 }
 input[type="submit"] {
     display: block;
-    width: 98%;
+    width: 80%;
     margin: 1em auto;
     font-size: 1.8rem;
     background-color:var(--main-color);
     color: var(--white);
-    min-width: 50vw;
+    min-width: 35vw;
     padding: 1.4rem;
 }
