@@ -3,31 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../vendor/bootstrap-icons.css">
+	<link rel="stylesheet" href="../vendor/bootstrap.min.css">
     <link rel="stylesheet" href="../css/styles.css">
     <style>
-        * {
+    * {
     box-sizing: border-box;
-}
+    }
     </style>
 </head>
-<header class="header">
-	<nav class="navbar">
-		<img class="logo" id="logo" src="" alt="Logo">
-		<input class="menu-btn" type="checkbox" id="menu-btn" />
-		<label class="menu-icon" for="menu-btn"><span class="nav-icon"></span></label>
-		<!-- Menu-->
-		<ul class="menu">
-			<li><a href="home.html">Home</a></li>
-			<li><a href="car.html">Hire a car</a></li>
-			<li><a href="tours.html">Tours & Travel</a></li>
-			<li><a href="earn.html">Earn</a></li>
-			<li><a href="grow.html">Grow</a></li>
-			<li><a href="#" class="active">Buy a car</a></li>
-			<li><a href="about.html">About Us</a></li>
-			<li><a href="privacy.html">Privacy Policy</a></li>
-		</ul>
-	</nav>
-</header>
+<!-- header section starts here -->
+<header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid d-flex align-items-center justify-content-between">
+    
+        <a href="#" class="logo d-flex align-items-center  me-auto me-lg-0">
+        <img src="" alt="">
+        <h1>Zeta CarHires</h1>
+        </a>
+    
+        <nav id="navbar" class="navbar">
+        <ul>
+            <li><a href="" class="active">Home</a></li>
+            <li><a href="car.html">Hire a car</a></li>
+            <li><a href="tours.html">Tours & Travel</a></li>
+            <li><a href="earn.html">Earn</a></li>
+            <li><a href="grow.html">Grow</a></li>
+            <li><a href="buy.html">Buy a car</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+        </ul>
+        </nav><!-- .navbar -->
+        <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+        <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+    </div>
+    </header>
+    <!-- End Header -->
 <body class="buy">
      <!-- home section starts here -->
     <section class="home" id="home">
@@ -40,7 +50,7 @@
     <!-- menu section starts here -->
     <section class="hero">
 
-        <h1 class="header">our<span> cars </span></h1>
+        <h1 class="head">our<span> cars </span></h1>
 
         <div class="row">            
             <div class="col">
@@ -74,6 +84,7 @@
                 <button class="btn">Buy</button>
             </div>
         </div>
-    </section>
+    </section>   
 </body>
+<script src="../js/script.js"></script> 
 </html>
