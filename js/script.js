@@ -1,38 +1,40 @@
-var menubtn = document.getElementById("menu-btn");
-var crossbtn = document.getElementById("crossbtn");
-var navbar = document.getElementById("navbar");
-let timeoutID;
 
-function displayNavbar(){
- menubtn.style.display="none";
- crossbtn.style.display="block";
- navbar.style.display="initial";
-}
-function closeNavbar(){
-    navbar.style.display="none";
-    menubtn.style.display="block";
-    crossbtn.style.display="none";
-}
-if (menubtn.style.display="block"){
-    crossbtn.style.display="none";
-}else{
-    menubtn.style.display="none";
-}
 
-function widthChangeCallback(){
-    if(window.innerWidth<768){
-        menubtn.style.display="initial";
-        navbar.style.display="none";
-    }else{
-        crossbtn.style.display="none";
-        menubtn.style.display="none";
-        navbar.style.display="initial";
+document.addEventListener('DOMContentLoaded', () => {
+    "use strict";
+    const mobileNavShow = document.querySelector('.mobile-nav-show');
+    const mobileNavHide = document.querySelector('.mobile-nav-hide');
+  
+    document.querySelectorAll('.mobile-nav-toggle').forEach(el => {
+      el.addEventListener('click', function(event) {
+        event.preventDefault();
+        mobileNavToogle();
+      })
+    });
+  
+    function mobileNavToogle() {
+      document.querySelector('body').classList.toggle('mobile-nav-active');
+      mobileNavShow.classList.toggle('d-none');
+      mobileNavHide.classList.toggle('d-none');
     }
-}
-window.addEventListener("resize",
-widthChangeCallback);
-
-    document.addEventListener("DOMContentLoaded", function() {
+  
+    /**
+     * Hide mobile nav on same-page/hash links
+     */
+    document.querySelectorAll('#navbar a').forEach(navbarlink => {
+  
+      if (!navbarlink.hash) return;
+  
+      let section = document.querySelector(navbarlink.hash);
+      if (!section) return;
+  
+      navbarlink.addEventListener('click', () => {
+        if (document.querySelector('.mobile-nav-active')) {
+          mobileNavToogle();
+        }
+      });
+  
+    });
     const testimonials = document.querySelector('.testimonials');
     const persons = document.querySelectorAll('.person');
     const prevButton = document.querySelector('.prev');
@@ -61,6 +63,6 @@ widthChangeCallback);
     prevButton.addEventListener('click', prevPerson);
 
     setInterval(nextPerson, interval);
-});
+  });
 
 
