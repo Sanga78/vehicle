@@ -1,5 +1,5 @@
 :root {
-    --main-color: rgb(83, 172, 250);
+    --main-color: rgb(8, 94, 180);
     --black: #13131a;
     --bg: white;
     --white: #ffffff;
@@ -178,34 +178,43 @@ button {
 }
 
 .menu .box-container .box {
-    padding: 5rem;
-    text-align: center;
-    /* border: var(--border); */
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding-bottom: 1rem;
+    text-align: center;
 }
 
 .menu .box-container .box img {
-    height: 15rem;
-    margin: 2rem 0;
-    padding: 1rem;
+    height: 20rem;
+    width: 100%;
 }
-
+.menu .box-container .box img:hover{
+    transform: scale(1.05);
+    border-radius: .5rem;
+}
 .menu .box-container .box h3 {
+    text-align: center;
     color: var(--black);
     font-size: 2rem;
     padding: 1rem 0;
 }
 
 .menu .box-container .box .price {
+    text-align: center;
     color: var(--black);
     font-size: 2.5rem;
     padding: .5rem 0;
 }
-
+.menu .box-container .box button{
+width: 85%;
+  margin: 1em auto;
+  min-width: 20vw;
+}
+.menu .box-container .box button:hover{
+    background-color:rgba(8, 94, 180,0.75);
+}
 .menu .box-container .box .price span {
-    font-size: 1.5rem;
-    text-decoration: line-through;
-    font-weight: lighter;
+    font-size: 2.5rem;
+    color: var(--main-color);
 }
 
 .review .box-container {
