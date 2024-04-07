@@ -302,15 +302,13 @@ cursor: pointer;
     text-align: center;
     text-align: center;
 }
-.home video{
-margin-top: -18%;
-}
-.home .description{
-    font-size: 1.5rem;
-    color: var(--main-color);
+
+.home .description h2{
+    font-size: 3.5rem;
 }
 .home .description span{
-color: var(--black);
+  font-size: 80%;
+color: var(--white);
 }
 /* end of home section */
 .tours .home{
@@ -477,7 +475,7 @@ textarea{
   overflow: hidden;
 }
 .buy .row .col:hover img {
-  transform: scale(1.2);
+  transform: scale(1.1);
 } 
 .buy .row::after {
   content: "";
@@ -725,3 +723,97 @@ padding: 1rem;
   border-color: white;
   min-width: 20vw;
 } 
+.index .offer{
+  padding: 10px 7%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  gap: 2.5rem;
+  margin-top: -9%;
+  overflow: hidden;
+}
+.index .offer > div{
+  background-color: var(--white);
+  min-height: 150px;
+  height: 200px;
+  padding: .8rem 2rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.index .home{
+  background-image: url(../images/bg_1.jpg);
+  margin-top: 5%;
+}
+.index .home h2{
+  color: yellow;
+}
+.grow form{
+  max-height: 500px;
+  background-color: var(--white);
+  color: var(--black);
+  padding: 1.5rem;
+}
+.grow form h3{
+  color: var(--white);
+}
+.grow form input{
+  border: .1rem solid gray;
+}
+.grow form .btn{
+  width: 100%;
+  text-transform: capitalize;
+  margin: 1.2em auto;
+  font-size: 1.2rem;
+  min-width: 20vw;
+  padding: .5rem;
+  background-color: var(--main-color);
+}
+.grow .home{
+ background-image: url(../images/bg_3.jpg);
+ background-size: cover;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  gap: 1.5rem;
+  height: 100vh;
+  padding-top: 5%;
+}
+.grow .home h2{
+  color: var(--white);
+}
+.grow .home h3{
+  color: azure;
+}
+
+.grow .quote{
+  min-height: 50vh;
+  background-color: var(--main-color);
+  background-size:cover;
+  color: var(--white);
+  margin: 0 2rem;
+  padding: 10px 3%;
+}
+.grow .quote p{
+  font-family: var(--font-default);
+  font-style: italic;
+  line-height: 1.8;
+  font-size: 2rem;
+}
+.grow .quote .details{
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  gap: 2.5rem;
+  align-items: center;
+
+}
+.grow .quote .details img{
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+}
+.grow .quote .details h2{
+  color: #f5f6f7;
+}
+.grow .hero{
+  min-height: 30vh;
+  padding: 2rem 0;
+  font-size: 1.5rem;
+}
