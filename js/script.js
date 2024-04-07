@@ -35,7 +35,6 @@ document.addEventListener('DOMContentLoaded', () => {
       });
   
     });
-    const testimonials = document.querySelector('.testimonials');
     const persons = document.querySelectorAll('.person');
     const prevButton = document.querySelector('.prev');
     const nextButton = document.querySelector('.next');
@@ -59,8 +58,8 @@ document.addEventListener('DOMContentLoaded', () => {
         showPerson(index);
     }
 
-    nextButton.addEventListener('click', nextPerson);
-    prevButton.addEventListener('click', prevPerson);
+    // nextButton.addEventListener('click', nextPerson);
+    // prevButton.addEventListener('click', prevPerson);
 
     setInterval(nextPerson, interval);
   });
