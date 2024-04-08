@@ -10,7 +10,6 @@
 	<link rel="stylesheet" href="../vendor/bootstrap-icons.css">
 	<link rel="stylesheet" href="../vendor/bootstrap.min.css">
   	<link rel="stylesheet" href="../css/styles.css">
-	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
 </head>
 
 <body class="index">
@@ -43,7 +42,13 @@
 
 <section class="home">
 	<div class="description">
-		<h2>Welcome to Zeta Carhires<br><span>Hire.Buy.Earn.Grow</span</h2>
+		<h2>Welcome to Zeta Carhires<br>
+			<span class="change-container">
+				<span class="changing">Hire your favorite car</span>
+				<span class="changing">Earn with Us</span>
+				<span class="changing">Buy you dream car</span>
+			</span>
+		</h2>
 	</div>
 </section>
 <section>
@@ -82,9 +87,9 @@
         <button class="next">&#8250;</button>
     </div>
 </section>
-<section class="footer ">
+<section class="footer">
 	<div class="logo">
-		<img src="../images/Logo.jpg" alt="logo">
+		<img src="../images/Logo.jpg" alt="logo" width="50%" height="auto">
 	</div>
 	<div class="links">
 		<ul>
@@ -113,37 +118,4 @@
 </div>
 </body>
 <script src="../js/script.js"></script>
-<script>
-	document.addEventListener("DOMContentLoaded", function() {
-    const testimonials = document.querySelector('.testimonials');
-    const persons = document.querySelectorAll('.person');
-    const prevButton = document.querySelector('.prev');
-    const nextButton = document.querySelector('.next');
-
-    let index = 0;
-    const interval = 3000; // Change slide every 3 seconds
-
-    function showPerson(idx) {
-        persons.forEach((person, i) => {
-            person.style.display = (i === idx) ? 'inline-block' : 'none';
-        });
-    }
-
-    function nextPerson() {
-        index = (index + 1) % persons.length;
-        showPerson(index);
-    }
-
-    function prevPerson() {
-        index = (index - 1 + persons.length) % persons.length;
-        showPerson(index);
-    }
-
-    nextButton.addEventListener('click', nextPerson);
-    prevButton.addEventListener('click', prevPerson);
-
-    setInterval(nextPerson, interval);
-});
-
-</script>
 </html>

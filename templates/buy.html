@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../vendor/bootstrap-icons.css">
 	<link rel="stylesheet" href="../vendor/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.1.2/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/styles.css">
     <style>
     * {
@@ -18,7 +19,7 @@
     <div class="container-fluid d-flex align-items-center justify-content-between">
     
         <a href="#" class="logo d-flex align-items-center  me-auto me-lg-0">
-        <img src="" alt="">
+        <img src="../images/Logo.jpg" alt="" style="border: none;">
         <h1>Zeta CarHires</h1>
         </a>
     
@@ -42,7 +43,12 @@
      <!-- home section starts here -->
     <section class="home" id="home">
         <div class="content">
-            <div class="one"><h2>Get your dream car from us</h2></div>
+            <div class="carousel">
+                <img src="../images/car-1.jpg" class="carousel-image">
+                <img src="../images/car-2.jpg" class="carousel-image hidden">
+                <img src="../images/car-3.jpg" class="carousel-image hidden">
+                <div class="centered-text">Get a car from us</div>
+            </div>
         </div>
     </section>
     <!-- home section ends here -->
