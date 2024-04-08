@@ -343,6 +343,10 @@ padding: 2rem;
   border-radius: .5rem;
   text-align: center;
 } 
+.btn:hover{
+  color: var(--white);
+  background-color: #007bff;
+} 
 .tours .plan{
   padding: 15px 7%;
   min-height: 65vh;
@@ -365,9 +369,7 @@ padding: 2rem;
   height: 280px;
   width: 480px;
 }
-.tours .plan .memory .btn{
-  margin-top: 2.5rem;
-}
+
 .tours .connect{
   margin-top: 2rem;
   text-align: center;
@@ -420,7 +422,6 @@ textarea{
   display: block;
   width: 90%;
   margin: 1em auto;
-  height: 2em;
   font-size: 1.1rem;
   border-color: white;
   min-width: 20vw;
@@ -448,48 +449,6 @@ textarea{
   border-bottom: 4px solid var(--black);
 }
 
-/* .buy .row{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 16px;
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 20px 10px;
-}
-.buy .row .col{
-  border: var(--border);
-  border-radius: 10px;
-  max-width: 350px;
-  text-align: center;
-}
-  
-.buy .row .col img {
-  width: 100%;
-  max-width: 350px;
-  height: 300px;
-  object-fit: cover;
-  border-radius: 10px;
-  overflow: hidden;
-}
-.buy .row .col:hover img {
-  transform: scale(1.1);
-} 
-.buy .row::after {
-  content: "";
-  width: 350px;
-}
-.buy .row .col button{
-  display: block;
-  width: 95%;
-  margin: 1em auto;
-  height: 2em;
-  font-size: 1.2rem;
-  border-color: white;
-  min-width: 20vw;
-} */
 .about{
   padding: 10px 7%;
 }
@@ -823,12 +782,9 @@ padding: 1rem;
 }
 
 .car-list {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  /* justify-content: center; */
-  align-items: center;
-  gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  gap: 1rem;
   max-width: 1400px;
   margin: 0 auto;
   padding: 20px 10px;
@@ -837,7 +793,6 @@ padding: 1rem;
 .car-item {
   border: 1px solid #ddd;
   padding: 10px;
-  width: calc(33.333% - 20px);
   background: #f9f9f9;
   text-align: center;
 }
@@ -846,10 +801,14 @@ padding: 1rem;
   width: 350px;
 }
 .car-item img {
+  border: none;
   width: 100%;
   height: auto;
 }
-
+.car-item img:hover{
+  transform: scale(1.1);
+  border-radius: 4px;
+}
 .btn-buy, .btn-desc {
   cursor: pointer;
   padding: 5px 10px;
@@ -899,4 +858,80 @@ padding: 1rem;
   .modal-content {
       width: 80%;
   }
+}
+.description .change-container{
+  position: relative;
+  display: inline-block;
+  width: 560px;
+  margin-top: 50px;
+}
+
+.changing {
+  font-family: var(--font-secondary);
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+  left:0;
+  bottom:0;
+  height:0;
+  opacity:0;
+  color: #b1d4e0;
+  text-transform: uppercase;
+  word-spacing: 5px;
+  text-align: center;
+  font-size: 3rem;
+}
+
+.changing:nth-child(1) {
+animation: revealNextWord 6s cubic-bezier(0.57, 1.52, 0.9, 1.08) 1.5s infinite;
+}
+
+.changing:nth-child(2) {
+animation: revealNextWord 6s cubic-bezier(0.57, 1.52, 0.9, 1.08) 3s infinite;
+}
+
+.changing:nth-child(3) {
+animation: revealNextWord 6s cubic-bezier(0.57, 1.52, 0.9, 1.08) 4.5s infinite;
+}
+
+@keyframes revealNextWord {
+0% { 
+  opacity: 0.3; 
+  height: 0.0; 
+}
+10% { 
+  opacity: 1; 
+  height:1.2em; 
+}
+20% { 
+  opacity: 1; 
+  height:1.2em; 
+}
+28% { 
+  opacity: 0; 
+  height:2em; 
+}
+
+}
+.carousel {
+  margin-top: 2%;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  height: 90vh;
+  width: 100vw;
+}
+.carousel-image {
+  min-width: 100%;
+  min-height: 100%;
+  transition: transform 0.5s ease;
+}
+.centered-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(0, 60, 255);
+  font-size: 5rem;
+  text-shadow: 2px 2px 4px rgba(255,255,255,0.6);
 }
