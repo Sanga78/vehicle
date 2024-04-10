@@ -1,2 +1,2 @@
-#home.html
+home.html
  
