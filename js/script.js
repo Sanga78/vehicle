@@ -35,33 +35,6 @@ document.addEventListener('DOMContentLoaded', () => {
       });
   
     });
-    const persons = document.querySelectorAll('.person');
-    const prevButton = document.querySelector('.prev');
-    const nextButton = document.querySelector('.next');
-
-    let index = 0;
-    const interval = 3000; // Change slide every 3 seconds
-
-    function showPerson(idx) {
-        persons.forEach((person, i) => {
-            person.style.display = (i === idx) ? 'inline-block' : 'none';
-        });
-    }
-
-    function nextPerson() {
-        index = (index + 1) % persons.length;
-        showPerson(index);
-    }
-
-    function prevPerson() {
-        index = (index - 1 + persons.length) % persons.length;
-        showPerson(index);
-    }
-
-    // nextButton.addEventListener('click', nextPerson);
-    // prevButton.addEventListener('click', prevPerson);
-
-    setInterval(nextPerson, interval);
   });
   let currentIndex = 0;
   const images = document.querySelectorAll('.carousel-image');
@@ -72,3 +45,31 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   setInterval(changeImage, 3000); // Change image every 3 seconds
 
+  const slider = document.querySelector('.slider');
+  const items = document.querySelectorAll('.item');
+  const btns = document.querySelectorAll('.slider-btn');
+  
+  function reset() {
+    for (let i = 0; i < items.length; i++) {
+      btns[i].classList.remove('expand');
+      items[i].classList.remove('animation');
+    } 
+  }
+  
+  function animate(i) {
+    btns[i].classList.add('expand');
+    items[i].classList.add('animation');
+  }
+  
+  function scrollTo(i) {
+    slider.style.transform = `translateX(${-i * slider.offsetWidth}px)`;
+    reset();
+    animate(i);
+  }
+  
+  const activate = (e) => e.target.matches('.slider-btn') && scrollTo(e.target.dataset.index);
+  
+  const init = () => animate(0);
+  
+  window.addEventListener('load',init,false);
+  window.addEventListener('click',activate,false);
