@@ -470,54 +470,79 @@ textarea{
   align-items: start;
 }
 
-
-/* footer section styling */
-.footer{
-    background: var(--bg);
-    padding: 20px 10%;
-    color: var(--black);
-    position: bottom;
-    font-size: 1.2rem;
-    font-weight: 100;
-    height: 65vh;
+.footer {
+  padding: 10px 7%;
+  background: whitesmoke;
+  text-align: start;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  border-top: var(--border);
 }
 
-.footer{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-.footer > div{
-    min-width: 200px;
-    padding: 1.5rem;
-}
-.footer .links{
-    display: block;
-    text-transform: unset;
-}
-.footer .links ul{
-    list-style: none;
-    line-height: 2rem;
-}
-.footer .links ul li a{
-    text-decoration: none;
-    color: var(--black);
-    font-size: 1.2rem;
-    font-weight: 100;
-}
-.footer .links ul li a.active{
-    font-weight: 600;
-}
-.footer .links ul li a:hover{
-    border-bottom: .15rem solid rgba(6, 5, 5, 0.52);
-    border-radius: 2px;
-    padding-bottom: .5rem;
+.footer .share {
+  padding: 1rem 0;
 }
 
+.footer .share {
+  padding: 1rem 0;
+}
+.footer .logo{
+  width: 100px;
+}
+.footer .logo img{
+  width: 100%;
+}
+.footer .share a {
+  height: 5rem;
+  width: 5rem;
+  line-height: 5rem;
+  font-size: 2rem;
+  color: var(--black);
+  border: var(--border);
+  margin: .3rem;
+  border-radius: 50%;
+}
+
+.footer .share a:hover {
+  background-color: var(--main-color);
+}
+
+.footer .links {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 1rem 0;
+  gap: .5rem;
+}
+
+.footer .links a {
+  font-family: var(--font-primary);
+  color: var(--black);
+  font-size: 1.2rem;
+}
+.footer .links a:hover,
+.footer .active{
+  font-weight: 600;
+}
+
+.footer .cont h3{
+  font-size: 1.2rem;
+  font-weight: lighter;
+}
 .share a{
 padding:1rem;
 }
+.credit {
+  font-size: 2rem;
+  color: var(--black);
+  font-weight: lighter;
+  padding: 1.5rem;
+}
 
+.credit span {
+  color: var(--main-color);
+}
 .testimonial{
   padding: 10px 7%;
 }
@@ -657,9 +682,7 @@ padding: 1rem;
   padding: 1.5rem;
   position: relative;
 }
-.grow form h3{
-  color: var(--white);
-}
+
 .grow form input{
   border: .1rem solid gray;
 }
@@ -1049,8 +1072,20 @@ animation: revealNextWord 6s cubic-bezier(0.57, 1.52, 0.9, 1.08) 4.5s infinite;
   html {
       font-size: 75%;
   }
-  footer{
-      padding: 10px;
+  .footer .links{
+    margin-top: -5%;
+  }
+  .footer .links a{
+      font-size: 1rem;
+  }
+  .footer .cont h3{
+    font-size: 1rem;
+  }
+  .footer .logo{
+    width: 50px;
+  }
+  .credit{
+    font-size: 1rem;
   }
   .index .description h2{
     font-size: 2.1em;
