@@ -257,39 +257,6 @@ html::-webkit-scrollbar-thumb {
   }
 }
   
-
-.testimonials {
-background-color: antiquewhite;
-overflow: hidden;
-white-space: nowrap;
-display: flex;
-justify-content: space-between;
-align-items: center;
-/* position: relative; Needed for absolute positioning of buttons */
-}
-
-.person {
-display: none;
-width: 200px; /* Adjust as needed */
-margin-right: 10px; /* Adjust as needed */
-height: 200px;
-}
-.person:first-child {
-display: inline-block; /* Display the first person initially */
-}
-
-.prev,
-.next {
-/* position: absolute;
-top: 50%;
-transform: translateY(-50%); */
-background: none;
-border: none;
-color: #333;
-font-size: 24px;
-cursor: pointer;
-}
-
 /* home section */
 .home{
     min-height: 90vh;
@@ -324,17 +291,25 @@ padding: 2rem;
   padding: 15px 5%;
 }
 .tours .hero .row{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  gap: 1rem;
 }
 .tours .hero .row .col{
-  max-width: 400px;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  width: 400px;
   min-height: 5rem;
-  padding: 2.5rem;
 }
-
+.tours .hero .row .col .image{
+  max-width: 450px;
+  max-height: 250px;
+}
+.tours .hero .row .col .image img{
+  width: 100%;
+  height: 100%;
+}
 .btn{
   color: var(--white);
   background-color: var(--main-color);
@@ -542,37 +517,7 @@ textarea{
 .share a{
 padding:1rem;
 }
-/* media queries */
-@media(max-width: 450px) {
-    html {
-        font-size: 75%;
-    }
-    footer{
-        padding: 10px;
-    }
-    
-}
 
-@media (min-aspect-ratio: 16/9) {
-    video {
-      width: 100%;
-      height: auto;
-    }
-  }
-@media (max-aspect-ratio: 16/9) {
-    video {
-      width: auto;
-      height: 100%;
-    }
-  }
-@media (max-width: 768px) {
-    video {
-    display: none;
-  }
-  #main{
-    background-size: cover;
-  }
-}
 .testimonial{
   padding: 10px 7%;
 }
@@ -704,11 +649,13 @@ padding: 1rem;
 .index .home h2{
   color: yellow;
 }
+
 .grow form{
   max-height: 500px;
   background-color: var(--white);
   color: var(--black);
   padding: 1.5rem;
+  position: relative;
 }
 .grow form h3{
   color: var(--white);
@@ -734,6 +681,18 @@ padding: 1rem;
   height: 100vh;
   padding-top: 5%;
 }
+.delay-neg-500 {
+  animation-name: move;
+  animation-delay: -300ms;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes move {
+  from { right: -200px; }
+  to { right: 0px; }
+}
+
 .grow .home h2{
   color: var(--white);
 }
@@ -796,6 +755,15 @@ padding: 1rem;
   background: #f9f9f9;
   text-align: center;
 }
+.car-item .gari{
+  height: 250px;
+}
+.car-item .gari img{
+  height: 100%;
+}
+.car-images img{
+  border: none;
+}
 .car-lists::after {
   content: "";
   width: 350px;
@@ -853,12 +821,6 @@ padding: 1rem;
   cursor: pointer;
 }
 
-@media screen and (max-width: 768px) {
-  
-  .modal-content {
-      width: 80%;
-  }
-}
 .description .change-container{
   position: relative;
   display: inline-block;
@@ -926,6 +888,7 @@ animation: revealNextWord 6s cubic-bezier(0.57, 1.52, 0.9, 1.08) 4.5s infinite;
   min-height: 100%;
   transition: transform 0.5s ease;
 }
+
 .centered-text {
   position: absolute;
   top: 50%;
@@ -934,4 +897,190 @@ animation: revealNextWord 6s cubic-bezier(0.57, 1.52, 0.9, 1.08) 4.5s infinite;
   color: rgb(0, 60, 255);
   font-size: 5rem;
   text-shadow: 2px 2px 4px rgba(255,255,255,0.6);
+}
+
+
+.test {
+  height: 75svh;
+  display: grid;
+  place-items: center;
+}
+
+.testify {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  overflow: hidden;
+}
+
+.slider {
+  width: min(90vw,500px);
+  height: 300px;
+  list-style-type: none;
+  display: flex;
+  transition: transform 1.25s;
+  gap: 1.2rem;
+}
+
+.item {
+  position: relative;
+  min-width: 100%;
+  height: inherit;
+  display: flex;
+  align-items: center;
+
+  & .testimonial {
+    width: 65%;
+    padding: 2rem;
+    padding-right: 5rem;
+    background-color: var(--main-color);
+    color: white;
+    border-radius: 0.75rem;
+    font: 100 0.7rem/1.6 helvetica,sans-serif;
+    opacity: 0;
+    transform: translateX(125px);
+
+    & p {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+
+    & p:nth-of-type(1) {
+      font-weight: 900;
+      font-size: 0.9rem;
+    }
+
+    & p:nth-of-type(2) {
+      font-style: italic;
+      font-weight: 400;
+      margin-top: 1rem;
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.7);
+    }
+
+    & p:nth-of-type(3) {
+      color: rgba(255,255,255,0.7);
+      font-size: 0.65rem;
+    }
+  }
+
+  & .image {
+    position: absolute;
+    right: 0;
+    z-index: 10;
+    width: 250px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    object-fit: cover;
+    transform: translateX(-25px);
+  }
+}
+
+.animation {
+  & .image { animation: image 1.25s ease-out forwards; }
+
+  & .testimonial {
+    animation: testimonial 1s ease-out forwards;
+
+    & p:nth-of-type(1) { animation: content 1s forwards 0.75s; }
+    & p:nth-of-type(2) { animation: content 1s forwards 1s; }
+    & p:nth-of-type(3) { animation: content 1s forwards 1.25s; }
+  }
+}
+
+@keyframes image {
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes testimonial {
+  50% { opacity: 1; }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes content {
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.slider-btn {
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 1rem;
+  border: none;
+  background-color: var(--main-color);
+  cursor: pointer;
+  margin: 0 0.1rem;
+  transition: width 0.3s;
+}
+
+.expand { width: 1.75rem; }
+@media(max-width: 450px) {
+  .item {
+    & .testimonial{
+      width: 90%;
+      padding: 1rem;
+      padding-right: 1.2rem;
+    }    
+    & .image {
+      width: 30%;
+    }
+  }
+  .slider {
+    width: min(100vw,250px);
+  } 
+}
+.expand { width: 1.75rem; }
+@media screen and (max-width: 768px) {
+  
+  .modal-content {
+      width: 80%;
+  }
+}
+/* media queries */
+@media(max-width: 450px) {
+  html {
+      font-size: 75%;
+  }
+  footer{
+      padding: 10px;
+  }
+  .index .description h2{
+    font-size: 2.1em;
+  }
+  .centered-text {
+    font-weight: 600;
+    font-size:2.3rem;
+  }
+  .car-item .gari{
+    height: 180px;
+  }
+}
+
+@media (min-aspect-ratio: 16/9) {
+  video {
+    width: 100%;
+    height: auto;
+  }
+}
+@media (max-aspect-ratio: 16/9) {
+  video {
+    width: auto;
+    height: 100%;
+  }
+}
+@media (max-width: 768px) {
+  video {
+  display: none;
+}
+#main{
+  background-size: cover;
+}
 }
