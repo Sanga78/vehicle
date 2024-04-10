@@ -10,6 +10,13 @@
 	<link rel="stylesheet" href="../vendor/bootstrap-icons.css">
 	<link rel="stylesheet" href="../vendor/bootstrap.min.css">
   	<link rel="stylesheet" href="../css/styles.css">
+	<style>
+		* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+	</style>
 </head>
 
 <body class="index">
@@ -56,36 +63,55 @@
 		<div>
 			<h2>Buy a car</h2>
 			<p>Get yourself a dream car at an affordable price</p>
+			<a href="buy.html" class="btn">Buy Now</a>
 		</div>
 		<div>
 			<h2>Hire a car</h2>
 			<p>Rent you favorite car from us</p>
+			<a href="car.html" class="btn">Hire Now</a>
 		</div>
 		<div>
 			<h2>Grow with Us</h2>
 			<p>Earn by renting a car to us</p>
+			<a href="grow.html" class="btn">View more</a>
 		</div>
 	</div>
 </section>
-<section>
-	<div class="testimonials">
-        <button class="prev">&#8249;</button>
-        <div class="carousel">
-            <div class="person">
-                <p>Simply the best way to hire a car</p>
-                <a href="">John Bosco</a>
+<section class="test">
+	<h1>Testimonials</h1>
+	<div class="testify">
+        <ul class='slider'>
+          <li class='item'>
+            <div class='testimonial'>
+              <p>"This is the best car-rental platform I've ever seen"</p>
+              <p>Aldrine Kiprotich</p>
+              <p>Kiongozi, Chuka</p>
             </div>
-            <div class="person">
-                <p>Another testimonial</p>
-                <a href="">John Doe</a>
+            <img class='image' src='../images/person_1.jpg'>
+          </li>
+          <li class='item'>
+            <div class='testimonial'>
+              <p>"The perfect place to buy a car"</p>
+              <p>Millicent Ngetich</p>
+              <p>Nurse, Eldoret</p>
             </div>
-            <div class="person">
-                <p>Yet another testimonial</p>
-                <a href="">Jane Smith</a>
+            <img class='image' src='../images/person_2.jpg'>
+          </li>
+          <li class='item'>
+            <div class='testimonial'>
+              <p>"Flexible prices for renting cars"</p>
+              <p>Kelly sanga</p>
+              <p>Proffesional, Eldoret</p>
             </div>
-        </div>
-        <button class="next">&#8250;</button>
-    </div>
+            <img class='image' src='../images/person_3.jpg'>
+          </li>
+        </ul>
+        <nav>
+          <button class='slider-btn' data-index='0'></button>
+          <button class='slider-btn' data-index='1'></button>
+          <button class='slider-btn' data-index='2'></button>
+        </nav>
+	</div>
 </section>
 <section class="footer">
 	<div class="logo">
