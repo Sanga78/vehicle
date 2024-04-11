@@ -691,41 +691,54 @@ textarea{
 }
 
 .footer {
-  padding: 10px 7%;
+  padding: 10px 2%;
   background: whitesmoke;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  border-top: var(--border);
+}
+.footer .div1{
   text-align: start;
   display: flex;
   justify-content: space-between;
   flex-wrap: nowrap;
-  border-top: var(--border);
 }
 
 .footer .share {
+  margin: 0 auto;
   padding: 1rem 0;
 }
 
-.footer .share {
-  padding: 1rem 0;
-}
 .footer .logo{
-  width: 100px;
+  width: 50px;
 }
 .footer .logo img{
   width: 100%;
 }
 .footer .share a {
-  height: 5rem;
-  width: 5rem;
-  line-height: 5rem;
-  font-size: 2rem;
-  color: var(--black);
+  height: 3rem;
+  width: 3rem;
+  line-height: 3rem;
+  font-size: 1.4rem;
   border: var(--border);
-  margin: .3rem;
+  margin: .5rem;
   border-radius: 50%;
 }
-
+.bi-facebook{
+  color: rgba(0, 38, 255,0.95);
+}
+.bi-instagram{
+  color: maroon;
+}
+.bi-linkedin{
+  color: rgb(0, 102, 255);
+}
+.bi-whatsapp{
+  color: rgba(0, 128, 0,0.7);
+}
 .footer .share a:hover {
-  background-color: var(--main-color);
+  background-color: var(--white);
 }
 
 .footer .links {
@@ -754,10 +767,11 @@ textarea{
 padding:1rem;
 }
 .credit {
-  font-size: 2rem;
+  text-align: center;
+  font-size: 1rem;
   color: var(--black);
   font-weight: lighter;
-  padding: 1.5rem;
+  padding: 1rem;
 }
 
 .credit span {
@@ -1320,7 +1334,7 @@ animation: revealNextWord 6s cubic-bezier(0.57, 1.52, 0.9, 1.08) 4.5s infinite;
     width: 50px;
   }
   .credit{
-    font-size: 1rem;
+    font-size: .65rem;
   }
   .index .description h2{
     font-size: 2.1em;
