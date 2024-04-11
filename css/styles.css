@@ -1157,6 +1157,8 @@ animation: revealNextWord 6s cubic-bezier(0.57, 1.52, 0.9, 1.08) 4.5s infinite;
 
 
 .test {
+  overflow-x: hidden;
+  width: 100vw;
   height: 75svh;
   display: grid;
   place-items: center;
