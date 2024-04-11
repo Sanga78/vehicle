@@ -1,1 +1,0 @@
-<a href="templates/home.html">home</a>
