@@ -48,12 +48,15 @@ document.addEventListener('DOMContentLoaded', () => {
   const slider = document.querySelector('.slider');
   const items = document.querySelectorAll('.item');
   const btns = document.querySelectorAll('.slider-btn');
+  let newIndex = 0; // Tracks the current slide
+  const intervalTime = 5000; // Time between slides in milliseconds
+  let autoSlideInterval; // Holds the interval ID for automatic sliding
   
   function reset() {
     for (let i = 0; i < items.length; i++) {
       btns[i].classList.remove('expand');
       items[i].classList.remove('animation');
-    } 
+    }
   }
   
   function animate(i) {
@@ -66,10 +69,88 @@ document.addEventListener('DOMContentLoaded', () => {
     reset();
     animate(i);
   }
+
+  function startAutoSlide() {
+    clearInterval(autoSlideInterval); // Clear the existing interval
+    autoSlideInterval = setInterval(() => {
+      newIndex = (newIndex + 1) % items.length;
+      scrollTo(newIndex);
+    }, intervalTime);
+  }
+  function pauseAutoSlide() {
+    clearInterval(autoSlideInterval);
+  }
   
   const activate = (e) => e.target.matches('.slider-btn') && scrollTo(e.target.dataset.index);
   
-  const init = () => animate(0);
+  const init = () => {
+    animate(0); // Start with the first slide
+    startAutoSlide(); // Initiate automatic sliding
+  };
   
-  window.addEventListener('load',init,false);
-  window.addEventListener('click',activate,false);
+  // Pause on hover
+  slider.addEventListener('mouseover', pauseAutoSlide);
+  slider.addEventListener('mouseout', startAutoSlide);
+  
+  // Swipe gestures for touch devices
+  let touchstartX = 0;
+  let touchendX = 0;
+  
+  function handleGesture() {
+    if (touchendX < touchstartX) {
+      newIndex = (newIndex + 1) % items.length;
+    } else if (touchendX > touchstartX) {
+      newIndex = (newIndex - 1 + items.length) % items.length; // Ensure the index stays within bounds
+    }
+    scrollTo(newIndex);
+  }
+  
+  slider.addEventListener('touchstart', e => {
+    touchstartX = e.changedTouches[0].screenX;
+  });
+  
+  slider.addEventListener('touchend', e => {
+    touchendX = e.changedTouches[0].screenX;
+    handleGesture();
+  });
+  
+  window.addEventListener('load', init, false);
+  window.addEventListener('click', activate, false);
+  
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight') {
+      currentIndex = (currentIndex + 1) % items.length;
+      scrollTo(currentIndex);
+      pauseAutoSlide(); // Ensure we pause the slider if the user is manually navigating
+      startAutoSlide(); // Resume automatic sliding after a delay
+    } else if (e.key === 'ArrowLeft') {
+      currentIndex = (currentIndex - 1 + items.length) % items.length;
+      scrollTo(currentIndex);
+      pauseAutoSlide(); // Pause automatic sliding
+      startAutoSlide(); // Resume automatic sliding
+    }
+  });
+ 
+// Debounce function to prevent rapid keyboard inputs
+function debounce(func, wait) {
+  let timeout;
+  return function() {
+    const context = this, args = arguments;
+    clearTimeout(timeout);
+    timeout = setTimeout(() => func.apply(context, args), wait);
+  };
+}
+
+// Enhanced keyboard navigation with debounce
+const handleKeyNavigation = debounce((e) => {
+  if (e.key === 'ArrowRight') {
+    newIndex = (newIndex + 1) % items.length;
+  } else if (e.key === 'ArrowLeft') {
+    newIndex = (newIndex - 1 + items.length) % items.length;
+  }
+  scrollTo(newIndex);
+  pauseAutoSlide(); // Pause the automatic sliding
+  startAutoSlide(); // Reset and start the automatic sliding timer
+}, 250); // 250 milliseconds debounce period
+
+document.addEventListener('keydown', handleKeyNavigation);
