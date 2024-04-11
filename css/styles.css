@@ -903,6 +903,7 @@ padding: 1rem;
   background-repeat: no-repeat;
   background-size: cover;
   margin-top: 5%;
+  width: 100vw;
 }
 .index .home h2{
   color: yellow;
