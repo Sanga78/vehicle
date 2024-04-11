@@ -278,6 +278,226 @@ html::-webkit-scrollbar-thumb {
 color: var(--white);
 }
 /* end of home section */
+/* hire page */
+.hire .heading {
+  text-align: center;
+  color: var(--black);
+  text-transform: uppercase;
+  padding-bottom: 3.5rem;
+  font-size: 4rem;
+}
+
+.hire .heading span {
+  color: var(--main-color);
+  text-transform: uppercase;
+}
+
+.hire .btn,
+.hire button {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: .9rem 3rem;
+  font-size: 1.7rem;
+  color: #fff;
+  background: var(--main-color);
+  cursor: pointer;
+}
+
+.hire .btn:hover {
+  letter-spacing: .2rem;
+}
+
+.hire{
+  background: var(--bg);
+}
+
+.hire section {
+  padding: 2rem 7%;
+}
+.hire .home {
+    min-height: 95vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--main-color);
+    background-size: cover;
+    background-position: center;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.hire .home .content {
+  color: var(--white);
+  max-width: 50rem;
+  flex: 1 1 45rem;
+}
+.hire .home .content h2{
+  max-width: 50rem;
+  flex: 1 1 45rem;
+  padding: 2rem 0;
+  font-size: 2rem;
+}
+.hire .home .content h3 {
+  font-size: 3rem;
+  color: var(--black);
+}
+.hire .home .content h3 span {
+  color: var(--white);
+}
+
+.hire .home .content p {
+  font-size: 3rem;
+  color: var(--main-color);
+  font-weight: bold;
+}
+.hire .home .content .three p{
+  font-size: 3rem;
+}
+
+.menu .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 1.5rem;
+}
+
+.menu .box-container .box {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  padding-bottom: 1rem;
+  text-align: center;
+}
+
+.menu .box-container .box img {
+  height: 20rem;
+  width: 100%;
+}
+.menu .box-container .box img:hover{
+  transform: scale(1.05);
+  border-radius: .5rem;
+}
+.menu .box-container .box h3 {
+  text-align: center;
+  color: var(--black);
+  font-size: 2rem;
+  padding: 1rem 0;
+}
+
+.menu .box-container .box .price {
+  text-align: center;
+  color: var(--black);
+  font-size: 2.5rem;
+  padding: .5rem 0;
+}
+.menu .box-container .box button{
+width: 85%;
+margin: 1em auto;
+min-width: 20vw;
+}
+.menu .box-container .box button:hover{
+  background-color:rgba(8, 94, 180,0.75);
+}
+.menu .box-container .box .price span {
+  font-size: 2.5rem;
+  color: var(--main-color);
+}
+
+.review .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 1.5rem;
+}
+
+.review .box-container .box {
+  border: var(--border);
+  text-align: center;
+  padding: 2rem;
+}
+
+.review .box-container .box p {
+  font-size: 1.6rem;
+  line-height: 1.8;
+  color: var(--black);
+  padding: 2rem 0;
+}
+
+.review .box-container .box .user {
+  height: 7rem;
+  width: 7rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.review .box-container .box h3 {
+  padding: 1rem 0;
+  font-size: 2rem;
+  color: var(--black);
+}
+
+.review .box-container .box .stars {
+  font-size: 1.5rem;
+  color: var(--main-color);
+}
+/* media queries */
+
+@media(max-width:991px) {
+  html {
+      font-size: 55%;
+  }
+  .hire section {
+      padding: 2rem;
+  }
+}
+
+@media(max-width:768px) {
+  .hire .home {
+      background-position: left;
+      justify-content: center;
+      text-align: center;
+  }
+  .hire .home .content h3 {
+      font-size: 4.5rem;
+  }
+  .hire .home .content p {
+      font-size: 1.5rem;
+  }
+}
+
+.hire form {
+  width: 60vw;
+  max-width: 500px;
+  min-width: 280px;
+  padding: 1rem 2rem;
+  border: 1px solid var(--black);
+}
+.hire form fieldset {
+  border: none;
+  padding: 1.5rem;
+}
+
+.hire form label {
+  display: block;
+  margin: 0.5rem 0;
+  color: var(--black);
+  font-size: 1.4rem;
+}
+.hire form input,
+.hire form select {
+  margin: 10px 0 0 0;
+  width: 100%;
+  min-height: 2em;
+  border-bottom: 1px solid black;
+}
+.hire form input[type="submit"] {
+  display: block;
+  width: 80%;
+  margin: 1em auto;
+  font-size: 1.8rem;
+  background-color:var(--main-color);
+  color: var(--white);
+  min-width: 35vw;
+  padding: 1.4rem;
+}
+
+/* end of hire page */
 .tours .home{
   height: 80vh;
 }
@@ -680,6 +900,8 @@ padding: 1rem;
 }
 .index .home{
   background-image: url(../images/bg_1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
   margin-top: 5%;
 }
 .index .home h2{
