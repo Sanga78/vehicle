@@ -1334,6 +1334,12 @@ animation: revealNextWord 6s cubic-bezier(0.57, 1.52, 0.9, 1.08) 4.5s infinite;
   .slider {
     width: min(100vw,250px);
   } 
+  .index .home{
+    min-height: 80vh;
+  }
+  .index .offer{
+    margin-top: -20%;
+  }
 }
 .expand { width: 1.75rem; }
 @media screen and (max-width: 768px) {
@@ -1393,4 +1399,18 @@ animation: revealNextWord 6s cubic-bezier(0.57, 1.52, 0.9, 1.08) 4.5s infinite;
 #main{
   background-size: cover;
 }
+}
+.fixed{
+  position: fixed;
+  margin-left: 83vw;
+}
+.whatsap{
+  font-size: 1.3rem;
+  padding: .8rem;
+  background-color:var(--main-color);
+  border-radius: 2rem;
+}
+.whatsap .bi-whatsapp{
+  padding: 1rem .5rem;
+  color: var(--white);
 }
