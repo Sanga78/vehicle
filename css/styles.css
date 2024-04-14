@@ -1356,7 +1356,7 @@ animation: revealNextWord 6s cubic-bezier(0.57, 1.52, 0.9, 1.08) 4.5s infinite;
 }
 .whatsap{
   font-size: 1.3rem;
-  padding: .8rem;
+  padding: 1rem;
   background-color:var(--main-color);
   border-radius: 2rem;
 }
@@ -1414,6 +1414,9 @@ animation: revealNextWord 6s cubic-bezier(0.57, 1.52, 0.9, 1.08) 4.5s infinite;
   }
   .hire .home{
     max-height: 80vh;
+  }
+  .earn .home{
+    max-height: 82vh;
   }
 }
 
