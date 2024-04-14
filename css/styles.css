@@ -259,7 +259,7 @@ html::-webkit-scrollbar-thumb {
   
 /* home section */
 .home{
-    min-height: 90vh;
+    min-height: 80vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -644,9 +644,9 @@ textarea{
   color: #fff;
   border-bottom: 4px solid var(--black);
 }
-/* .about {
+.about {
   padding: 50px 0;
-} */
+}
 
 .about .title {
   font-size: 2.5rem;
@@ -848,9 +848,11 @@ padding: 1rem;
   color: var(--main-color);
   font-size: 2rem;
 }
-
+.earn .home{
+  height: 60vh;
+}
 .earn .hero{
-  max-height: 75vh;
+  min-height: 75vh;
 }
 .earn .hero h2{
   text-transform: none;
