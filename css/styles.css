@@ -850,7 +850,7 @@ padding: 1rem;
 }
 
 .earn .hero{
-  min-height: 75vh;
+  max-height: 75vh;
 }
 .earn .hero h2{
   text-transform: none;
