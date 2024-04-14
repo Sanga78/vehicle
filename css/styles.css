@@ -1416,7 +1416,10 @@ animation: revealNextWord 6s cubic-bezier(0.57, 1.52, 0.9, 1.08) 4.5s infinite;
     max-height: 80vh;
   }
   .earn .home{
-    max-height: 82vh;
+    max-height: 86vh;
+  }
+  .fixed{
+    margin-left: 57%;
   }
 }
 
