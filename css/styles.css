@@ -1352,7 +1352,8 @@ animation: revealNextWord 6s cubic-bezier(0.57, 1.52, 0.9, 1.08) 4.5s infinite;
 
 .fixed{
   position: fixed;
-  margin-left: 83vw;
+  margin-left: 80vw;
+  margin-top: -2%;
 }
 .whatsap{
   font-size: 1.3rem;
@@ -1419,7 +1420,8 @@ animation: revealNextWord 6s cubic-bezier(0.57, 1.52, 0.9, 1.08) 4.5s infinite;
     max-height: 86vh;
   }
   .fixed{
-    margin-left: 57%;
+    margin-top: 0;
+    margin-left: 55%;
   }
 }
 
