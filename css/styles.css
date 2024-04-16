@@ -537,12 +537,14 @@ padding: 2rem;
   background-color: var(--main-color);
   padding: .6rem 1.2rem;
   font-size: 1.3rem;
-  border-radius: .5rem;
+  border-radius: 2rem;
   text-align: center;
 } 
 .btn:hover{
   color: var(--white);
   background-color: #007bff;
+  transform: translateY(-2px);
+  font-size: 1.4rem;
 } 
 .tours .plan{
   padding: 15px 7%;
@@ -1353,6 +1355,9 @@ animation: revealNextWord 6s cubic-bezier(0.57, 1.52, 0.9, 1.08) 4.5s infinite;
   .index .offer{
     margin-top: -20%;
   }
+  #policies{
+    margin-top: 15%;
+  }
 }
 .expand { width: 1.75rem; }
 @media screen and (max-width: 768px) {
@@ -1364,10 +1369,11 @@ animation: revealNextWord 6s cubic-bezier(0.57, 1.52, 0.9, 1.08) 4.5s infinite;
 
 .fixed{
   position: fixed;
-  margin-left: 80vw;
-  margin-top: -2%;
+  float: right;
+  margin-right: 1%;
 }
 .whatsap{
+  width: 100%;
   font-size: 1.3rem;
   padding: 1rem;
   background-color:var(--main-color);
@@ -1430,10 +1436,6 @@ animation: revealNextWord 6s cubic-bezier(0.57, 1.52, 0.9, 1.08) 4.5s infinite;
   }
   .earn .home{
     max-height: 86vh;
-  }
-  .fixed{
-    margin-top: 0;
-    margin-left: 55%;
   }
 }
 
