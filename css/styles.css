@@ -526,7 +526,7 @@ padding: 2rem;
 }
 .tours .hero .row .col .image{
   max-width: 450px;
-  max-height: 250px;
+  max-height: 200px;
 }
 .tours .hero .row .col .image img{
   width: 100%;
@@ -551,14 +551,19 @@ padding: 2rem;
   min-height: 65vh;
   display: flex;
   justify-content: space-between;
-  align-items: flex-stretch;
   flex: 1 1 45rem;
   flex-wrap: wrap;
+  align-items: center;
 }
 .tours .plan .image{
   flex: 40%;
+  width: 40vw;
+}
+.tours .plan .image img{
+  width: 100%;
 }
 .tours .plan .memory{
+  margin-left: -100px;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
@@ -567,6 +572,7 @@ padding: 2rem;
   border-radius: .5rem;
   height: 280px;
   width: 480px;
+  background-color: rgba(255, 255, 255,0.9);
 }
 
 .tours .connect{
@@ -1358,6 +1364,12 @@ animation: revealNextWord 6s cubic-bezier(0.57, 1.52, 0.9, 1.08) 4.5s infinite;
   #policies{
     margin-top: 15%;
   }
+  .tours .plan .memory{
+    margin-left: 0;
+    margin-top: 20px;
+    height: 220px;
+  }
+  
 }
 .expand { width: 1.75rem; }
 @media screen and (max-width: 768px) {
