@@ -323,7 +323,7 @@ color: var(--white);
     display: flex;
     align-items: center;
     justify-content: center;
-    background:linear-gradient( rgba(12, 59, 105, 0.5) 100%, rgba(0, 0, 0, 0.5)100%),url("../images/bg_3.jpg");
+    background:linear-gradient( rgba(12, 59, 105, 0.5) 100%, rgba(0, 0, 0, 0.5)100%),url("../images/pexels-pixabay-164634.jpg");
     background-size: cover;
     background-position: center;
     flex-wrap: wrap;
@@ -862,12 +862,24 @@ padding: 1rem;
   font-size: 2rem;
 }
 .earn .home{
-  height: 60vh;
+  color: var(--white);
+  background-color: var(--main-color);
+}
+.earn .home .description{
+  width: 60vw;
+}
+.earn .home h2{
+  text-transform: unset;
+  color: var(--white);
+  line-height: 0.85;
+  font-weight: bold;
+  font-size: 4rem;
 }
 .earn .hero{
   min-height: 75vh;
 }
 .earn .hero h2{
+  color: var(--black);
   text-transform: none;
   font-size: 3.4rem;
   padding-bottom: 4rem;
@@ -1045,6 +1057,9 @@ padding: 1rem;
   min-height: 30vh;
   padding: 2rem 0;
   font-size: 1.5rem;
+}
+.grow .hero .row .col-lg-2{
+  place-items: center;
 }
 .cars-for-sale {
   padding: 20px;
