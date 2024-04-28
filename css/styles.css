@@ -323,7 +323,7 @@ color: var(--white);
     display: flex;
     align-items: center;
     justify-content: center;
-    background:linear-gradient( rgba(0, 0, 0, 0.5) 100%, rgba(0, 0, 0, 0.5)100%),url("../images/bg_3.jpg");
+    background:linear-gradient( rgba(12, 59, 105, 0.5) 100%, rgba(0, 0, 0, 0.5)100%),url("../images/bg_3.jpg");
     background-size: cover;
     background-position: center;
     flex-wrap: wrap;
@@ -981,7 +981,7 @@ padding: 1rem;
   background-color: var(--main-color);
 }
 .grow .home{
- background-image: url(../images/bg_3.jpg);
+ background:linear-gradient( rgba(0, 0, 0, 0.5) 100%, rgba(0, 0, 0, 0.5)100%),url("../images/bg_3.jpg");
  background-size: cover;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
