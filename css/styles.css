@@ -360,19 +360,34 @@ color: var(--white);
 }
 
 .menu .box-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-  gap: 1.5rem;
+  /* display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(rem, 1fr));
+  gap: 1.5rem; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  row-gap: 1.5rem;
 }
 
 .menu .box-container .box {
+  max-width: 350px;
+  display: flex;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   padding-bottom: 1rem;
   text-align: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
 }
 
-.menu .box-container .box img {
-  height: 20rem;
+.menu .box-container .box .image-container {
+  flex: 60;
+}
+.menu .box-container .box .desc{
+  flex: 40;
+}
+.menu .box-container .box .image-container img{
+  object-fit: cover;
   width: 100%;
 }
 .menu .box-container .box img:hover{
@@ -504,11 +519,19 @@ min-width: 20vw;
 }
 
 /* end of hire page */
+
 .tours .home{
   height: 80vh;
 }
 .tours .home .content{
   padding-top: 5rem;
+}
+.call_us{
+  margin-top: 2rem;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .tours .home .content h2{
 padding: 2rem;
@@ -635,9 +658,46 @@ textarea{
   border-color: white;
   min-width: 20vw;
 }
+.phone{
+  background-color: #ddd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 36px;
+  position: absolute;
+  cursor: pointer;
+}
+.cta{
+  height: 65px;
+  width: 250px;
+  color: white;
+  z-index: 1;
+  transition: 1.2s;
+  background: linear-gradient(to right bottom,#4776E6,#8E54E9);
+}
+.number{
+  height: 65px;
+  width: 250px;
+  background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../images/about.jpg);
+  background-size: cover;
+  color: white;
+  box-shadow: 3px 3px 30px #aaa;
+}
+.cta:hover{
+  transform: translatex(-80%);
+  transition: 1.2s;
+}
 @media(max-width: 450px) {
   .tours .connect{
       padding: 2px;
+  }
+  .number{
+    height: 50px;
+    width: 220px;
+  }
+  .cta{
+    height: 50px;
+    width: 220px;
   }
 }
 
@@ -1216,6 +1276,8 @@ animation: revealNextWord 6s cubic-bezier(0.57, 1.52, 0.9, 1.08) 4.5s infinite;
   position: relative;
   height: 90vh;
   width: 100vw;
+  object-fit: cover;
+  overflow: hidden;
 }
 .carousel-image {
   min-width: 100%;
