@@ -1563,41 +1563,7 @@ animation: revealNextWord 6s cubic-bezier(0.57, 1.52, 0.9, 1.08) 4.5s infinite;
   background-size: cover;
 }
 }
-/* .index_footer{
-  bottom: 0;
-  background-color: rgb(1, 7, 12);
-  color: var(--white);
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  padding: 10px 7%;
-  list-style-type: none;
-}
-.index_footer .footer_heading{
-  text-align: start;
-  border-bottom: 1px solid white;
-  border
-}
-.index_footer div{
-  flex: 50;
-}
-.index_footer ul{
-  list-style-type: none;
-}
-.index_footer ul li{
-  font-size: 1.2rem;
-}
-.about_us{
-  font-size: 1.2rem;
-  line-height: 1.5;
-  max-width: 450px;
-}
-@media(max-width: 450px) {
-  .index_footer{
-  display: flex;
-  flex-direction: column;
-  }
-} */
+
 footer{
   background-color: #000;
   color: #fff;
@@ -1645,9 +1611,11 @@ ul li a:hover{
   margin: 10px 0;
 }
 .social-media a{
+  padding: 2px;
   color: #fff;
   margin-right: 10px;
   text-decoration: none;
+  font-size: 1.8rem;
 }
 .social-media a:hover{
   color: var(--main-color);
